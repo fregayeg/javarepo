@@ -1,4 +1,4 @@
-package tn.ocp.generics.wilcards;
+package tn.ocp.generics.wildcards;
 
 import java.util.ArrayList;
 import java.util.List;
