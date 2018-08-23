@@ -33,7 +33,7 @@ public class WildCardUse {
 		List<Number> list = new ArrayList<>();
 		list.add(10);
 		list.add(100);
-		printList(list); // prints: 10
+		printList(list); // prints: 10 100
 		
 		System.out.println("\n////////////");
 		
