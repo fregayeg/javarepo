@@ -17,7 +17,7 @@ public class SubtypesTest {
 	public static void main(String[] args) {
 		
 		// Legal code that doesn't work
-		List<Number> intList1 = new ArrayList<>();
+		List<Number> intList1 = new ArrayList<Number>();
 		intList1.add(new Integer(10)); // okay!
 		intList1.add(new Float(10.0f)); // okay!	
 		
