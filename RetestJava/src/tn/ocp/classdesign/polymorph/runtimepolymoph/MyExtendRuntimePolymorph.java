@@ -1,12 +1,13 @@
 package tn.ocp.classdesign.polymorph.runtimepolymoph;
 
 /**
- * Example of superclass containing a method
+ * Example of superclass containing a method show() to be overriden
  * @author REGAYEG
  *
  */
 class RuntimePolymorph {
 	
+	// TODO: Override show method
 	void show(int i) {
 		System.out.println("none");
 	}

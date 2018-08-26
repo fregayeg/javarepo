@@ -1,12 +1,13 @@
 package tn.ocp.classdesign.polymorph.runtimepolymoph;
 
 /**
- * Example of abstract class containing abstract methods show()
+ * Example of abstract class containing abstract methods show() to be overriden
  * @author REGAYEG
  *
  */
 abstract class MyAbstractClass {
-	
+	// TODO: Override show method in MyClassExtendAbsRuntimePolymorph class
+	//abstract method
 	abstract void show();
 }
 
@@ -17,17 +18,18 @@ abstract class MyAbstractClass {
  * 
  * @author REGAYEG
  */
-public class MyAbsExtendRuntimePolymorph extends MyAbstractClass{
+public class MyClassExtendAbsRuntimePolymorph extends MyAbstractClass{
 
 	@Override
 	void show() {
-		// TODO Auto-generated method stub
+		
 		System.out.println("Overriden");
 	}
 	
 	public static void main(String[] args) {
-		MyAbstractClass absExtendRuntimePolymorph = new MyAbsExtendRuntimePolymorph();
-		absExtendRuntimePolymorph.show(); // prints: "overriden"
+		// TODO: call the overriden show()
+		MyAbstractClass classExtendAbsRuntimePolymorph = new MyClassExtendAbsRuntimePolymorph();
+		classExtendAbsRuntimePolymorph.show(); // prints: "Overriden"
 	}
 }
 

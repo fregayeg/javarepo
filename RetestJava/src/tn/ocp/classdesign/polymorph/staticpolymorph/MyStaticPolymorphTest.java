@@ -6,6 +6,9 @@ package tn.ocp.classdesign.polymorph.staticpolymorph;
  *
  */
 abstract class MyStaticPolymorph {
+	
+	// TODO: Create overloading methods
+	
 	abstract int show(int i); // show a number
 	abstract String show(String str); // show a string
 	abstract boolean show(boolean isMessaged); // show a boolean
@@ -17,6 +20,8 @@ abstract class MyStaticPolymorph {
  *
  */
 public class MyStaticPolymorphTest extends MyStaticPolymorph{
+	
+	// TODO: Redefine show methods
 	
 	@Override
 	public int show(int i) {
@@ -41,6 +46,8 @@ public class MyStaticPolymorphTest extends MyStaticPolymorph{
 	}
 	
 	public static void main(String[] args) {
+		
+		// TODO: test all the show() method versions
 		MyStaticPolymorph myStaticPolymorph = new MyStaticPolymorphTest();
 		System.out.println(myStaticPolymorph.show(true)); // prints: false
 	}
