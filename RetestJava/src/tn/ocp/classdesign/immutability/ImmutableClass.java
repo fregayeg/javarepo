@@ -30,7 +30,8 @@ public final class ImmutableClass {
 		this(numberOfInstances,pName,pSet);
 	}
 	private ImmutableClass(int pNbrOfInst ,String pName, Set<String> pSet){
-		pNbrOfInst = ++numberOfInstances;
+		if(pNbrOfInst == 0)
+				pNbrOfInst = ++numberOfInstances;
 		id = pNbrOfInst;
 		name = pName;
 		setOfQualities = pSet;
@@ -47,7 +48,20 @@ public final class ImmutableClass {
 	public Set<String> getSetOfQualities() {
 		return setOfQualities;
 	}
-
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(this == obj)
+			return true;
+		if(obj == null)
+			return false;
+		if(getClass() != obj.getClass())
+			return false;
+		ImmutableClass other = (ImmutableClass) obj;
+		if(id != other.id || name != other.name)
+			return false;
+		return true;
+	}
 	@Override
 	public String toString() {
 		String strForSet = setOfQualities.isEmpty() ? "No qualities" : setOfQualities.toString();
@@ -59,19 +73,18 @@ public final class ImmutableClass {
 		Set<String> qualities= new HashSet<>();		
 		
 		ImmutableClass user = new ImmutableClass("Firas", qualities ); // autoincrement id, name and the set
-		
 		qualities.add("Kind");
 		qualities.add("Gentle");
 		qualities.add("Sometimes joking");
 		
 		System.out.println(user);
+		
 		ImmutableClass user2 = new ImmutableClass();
 		System.out.println(user2);
 		
-		ImmutableClass user3 = new ImmutableClass("Omar");
-		ImmutableClass user4 = new ImmutableClass("Omar");
+		ImmutableClass user3 = new ImmutableClass(1,"Omar",qualities);
+		ImmutableClass user4 = new ImmutableClass(2,"Omar", qualities);
 
-		System.out.println(user3);
 		
 		System.out.println(user3.equals(user4));
 		
