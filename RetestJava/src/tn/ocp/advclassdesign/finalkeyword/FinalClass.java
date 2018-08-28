@@ -19,6 +19,7 @@ abstract class NotFinalClass {
  *
  */
 public final class FinalClass extends NotFinalClass {
+	
 	// TODO: use final keyword in many cases
 	
 	//FIELDS
