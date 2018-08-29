@@ -1,7 +1,7 @@
 package tn.ocp.classdesign.polymorph.staticpolymorph;
 
 /**
- * Example of class containing abstract method show() overloaded (static polymorphism)
+ * Example of class containing abstract method show() overloaded (Static polymorphism)
  * @author REGAYEG
  *
  */
@@ -16,6 +16,7 @@ abstract class MyStaticPolymorph {
 }
 /**
  * Concrete class extending MyStaticPolymorph class and implement abstract methods show()
+ * NOTE: We are overriding methods from {@link MyStaticPolymorph} (Runtime polymorphism)
  * @author REGAYEG
  *
  */
@@ -48,6 +49,7 @@ public class MyStaticPolymorphTest extends MyStaticPolymorph{
 	public static void main(String[] args) {
 		
 		// TODO: test all the show() method versions
+		
 		MyStaticPolymorph myStaticPolymorph = new MyStaticPolymorphTest();
 		System.out.println(myStaticPolymorph.show(true)); // prints: false
 	}

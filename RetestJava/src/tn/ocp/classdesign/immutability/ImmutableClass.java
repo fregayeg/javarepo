@@ -16,10 +16,13 @@ import java.util.Set;
  */
 public final class ImmutableClass {
 	
+	// FIELDS
 	private final int id;
 	private final String name;
 	private final Set<String> setOfQualities;
 	private static int numberOfInstances;
+	
+	// CONSTRUCTORS
 	
 	public ImmutableClass() {
 		this(numberOfInstances,"\"Unknown\"", new HashSet<>());

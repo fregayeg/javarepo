@@ -1,4 +1,4 @@
-package tn.ocp.classdesign.polymorph.runtimepolymoph;
+package tn.ocp.classdesign.polymorph.runtimepolymorph;
 
 /**
  * Example of superclass containing a method show() to be overriden
@@ -14,12 +14,13 @@ class RuntimePolymorph {
 }
 
 /**
- * Example of class inherting the MyExtendRuntimePolymorph class and overriding the method show()
+ * Example of class inherting the ExtendConcRuntimePolymorph class and overriding the method show()
  * @author REGAYEG
  *
  */
-public class MyExtendRuntimePolymorph extends RuntimePolymorph {
+public class ExtendConcRuntimePolymorph extends RuntimePolymorph {
 	
+	// Overridden method
 	@Override
 	void show(int i) {
 		System.out.println(""+i);
@@ -30,7 +31,7 @@ public class MyExtendRuntimePolymorph extends RuntimePolymorph {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		RuntimePolymorph myRuntimePloymorph = new MyExtendRuntimePolymorph();
+		RuntimePolymorph myRuntimePloymorph = new ExtendConcRuntimePolymorph();
 		myRuntimePloymorph.show(1); // prints: 1
 		
 	}
